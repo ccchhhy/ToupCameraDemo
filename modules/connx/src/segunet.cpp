@@ -3,9 +3,9 @@
 SegUnet::SegUnet()
 {
     // CPU
-    auto model_file =  "models/segunet/model.pdmodel";
-    auto params_file = "models/segunet/model.pdiparams";
-    auto config_file = "models/segunet/deploy.yaml";
+    auto model_file =  "./models/segunet/model.pdmodel";
+    auto params_file = "./models/segunet/model.pdiparams";
+    auto config_file = "./models/segunet/deploy.yaml";
 
     auto option = fastdeploy::RuntimeOption();
     option.UseCpu();
@@ -21,9 +21,9 @@ SegUnet::SegUnet()
 SegUnet::SegUnet(bool isGPU)
 {
     // GPU
-    auto model_file =  "models/segunet/model.pdmodel";
-    auto params_file = "models/segunet/model.pdiparams";
-    auto config_file = "models/segunet/deploy.yaml";
+    auto model_file =  "./models/segunet/model.pdmodel";
+    auto params_file = "./models/segunet/model.pdiparams";
+    auto config_file = "./models/segunet/deploy.yaml";
 
     auto option = fastdeploy::RuntimeOption();
     option.UseGpu();

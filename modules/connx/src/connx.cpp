@@ -3,6 +3,7 @@
 #include "connxfacepaint.h"
 #include "cyolox.h"
 #include "segunet.h"
+#include "TinyPose.h"
 #include "QDebug"
 
 COnnx::COnnx()
@@ -23,6 +24,9 @@ COnnx* COnnx::createInstance(const std::string& type, bool isGPU) {
     }else if(type=="SegUnet"){
         qDebug() << "COnnx:创建SegUnet模型";
         return new SegUnet(isGPU);
+    }else if(type=="TinyPose"){
+        qDebug() << "COnnx:创建TinyPose模型";
+        return new TinyPose(isGPU);
     }else {
         return nullptr;
     }
